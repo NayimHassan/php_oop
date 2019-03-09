@@ -13,7 +13,7 @@ class db{
 	public function insert ($name,$model,$price)
 	{
 		$insert_query = "INSERT INTO mobile (name,model,price) VALUES (:name,:model,:price)";
-		  $statement = $this->conn->prepare($insert_query);
+		  $statement = $this->conn->prepare($insert_query);//here prepare is a pdo
 		  $statement->execute(
 		    array(
 		      ":name" => $Name,
